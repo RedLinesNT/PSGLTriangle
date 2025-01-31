@@ -1,24 +1,31 @@
-﻿///////////////////////////////////////////////////////
-/* Create, Dispose and Update the PSGL's environment */
-/* created to draw stuff into the PS3 :)             */
-///////////////////////////////////////////////////////
-#pragma once
+﻿#pragma once
+#include <PSGL/psgl.h>
 
+/// <summary>
+/// Create, Dispose and Update the PSGL's environment
+/// created to draw stuff into the PS3! :)
+/// </summary>
 class PSGLContext {
 public:
     /// <summary>
     /// Initialize and setup PSGL's context.
     /// </summary>
+    /// <param name="resolutions"><para>A 'priority-ordered' array of
+    /// 'CellVideoOutResolutionId' values to try to use to set up
+    /// PSGL.</para>
+    /// For more information about these parameters, check 'GetBestVideoMode's
+    /// documentation.</param>
+    /// <param name="numResolutions">The number of resolutions given.</param>
     /// <returns>
     /// False if something failed while creating
     /// PSGL's context.
     /// </returns>
-    bool Initialize();
+    bool Initialize(const unsigned int* resolutions, unsigned int numResolutions);
     /// <summary>
-    /// Destroy/Close the context previousl created
-    /// for PSGL.
+    /// Destroy/Close the context and other objects
+    /// previously created for PSGL.
     /// </summary>
-    void Dispose();
+    void Dispose() const;
 
     void PreRender();
     void PostRender();
@@ -69,4 +76,8 @@ public:
     /// the 'CellVideoOutResolutionId' ID will be returned.
     /// </returns>
     static unsigned int GetBestVideoMode(const unsigned int* resolutions, unsigned int numResolutions);
+
+private:
+    PSGLcontext* glContext = nullptr;
+    PSGLdevice* glDevice = nullptr;
 };

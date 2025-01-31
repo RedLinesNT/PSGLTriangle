@@ -3,7 +3,7 @@
 #include <cstdio>
 #include <sysutil/sysutil_sysparam.h>
 
-bool PSGLContext::Initialize() {
+bool PSGLContext::Initialize(const unsigned int* resolutions, unsigned int numResolutions) {
     //Based on Sony's documentation, the system's video output MUST
     //be ready and available before fully initializing PSGL (which is fair).
     //
@@ -16,12 +16,69 @@ bool PSGLContext::Initialize() {
     //For this project, waiting for the video output to be ready won't ever
     //be an issue, but in the case of a game, we should start some tasks in
     //background to boot a bit faster our "game".
-    if (!IsVideoOutputReady()) { std::printf("[PSGLContext::Initialize()] The system's video output is currently not ready. Waiting...\n"); }
+    if (!IsVideoOutputReady()) { std::printf("[PSGLContext::Initialize] The system's video output is currently not ready. Waiting...\n"); }
     while (!IsVideoOutputReady()) {} //Wait for the video output to be ready
+    std::printf("[PSGLContext::Initialize] System's video output is ready!\n");
 
-    std::printf("[PSGLContext::Initialize()] System's video output is ready!\n");
+    PSGLinitOptions glInitOptions;
+    glInitOptions.enable = PSGL_INIT_MAX_SPUS | PSGL_INIT_INITIALIZE_SPUS;
+    glInitOptions.maxSPUs = 1; //Raw SPU initialized in "Entry.cpp" (?)
+    glInitOptions.initializeSPUs = false; //Already previously initialized in "Entry.cpp"
+    glInitOptions.persistentMemorySize = 0;
+    glInitOptions.transientMemorySize = 0;
+    glInitOptions.errorConsole = 0;
+    glInitOptions.fifoSize = 0;
+    
+    //From what I understand, this is the memory that I allow
+    //PSGL to use. In my case I allocate half of the PlayStation3
+    //retail memory available.
+    //Retail consoles have 256MB of memory and REFERENCE STATIONS
+    //have 512MB (I think, and might be the same case with some DEVKITS).
+    glInitOptions.hostMemorySize = 128 * 1024*1024; //128MB
 
+    psglInit(&glInitOptions); //Initialize PSGL
+
+    //Find the best resolution available resolution from what we have...
+    unsigned int bestResolutionID = PSGLContext::GetBestVideoMode(resolutions, numResolutions);
+    if (bestResolutionID == 0) {
+        std::printf("[PSGLContext::Initialize] Unable to initialize with the '%u' resolution modes given!\n", numResolutions);
+        return false;
+    }
+
+    //The target rendering resolution
+    unsigned int targetWidth = 0;
+    unsigned int targetHeight = 0;
+    PSGLContext::GetResolutionFromResolutionID(bestResolutionID, targetWidth, targetHeight);
+    std::printf("[PSGLContext::Initialize] Requested resolution '%ux%u' is available and will be used...\n", targetWidth, targetHeight);
+
+    //Create the PSGLDevice initialization parameters
+    PSGLdeviceParameters params;
+    params.enable = PSGL_DEVICE_PARAMETERS_COLOR_FORMAT | PSGL_DEVICE_PARAMETERS_DEPTH_FORMAT |
+                    PSGL_DEVICE_PARAMETERS_MULTISAMPLING_MODE | PSGL_DEVICE_PARAMETERS_WIDTH_HEIGHT;
+    params.width = targetWidth;
+    params.height = targetHeight;
+    params.colorFormat = GL_ARGB_SCE;
+    params.depthFormat = GL_DEPTH_COMPONENT24;
+    params.multisamplingMode = GL_MULTISAMPLING_NONE_SCE;
+
+    glDevice = psglCreateDeviceExtended(&params);
+    glContext = psglCreateContext();
+
+    psglMakeCurrent(glContext, glDevice);
+    psglResetCurrentContext();
+
+    //Everything is created, now we'll set up the rest of PSGL stuff
+    //TODO: INITIALIZE GL_VIEWPORT / GL_PROJECTION / ORTHOGRAPHIC STUFF
+    
     return true;
+}
+
+void PSGLContext::Dispose() const {
+    psglDestroyContext(glContext);
+    psglDestroyDevice(glDevice);
+    psglExit();
+    
+    std::printf("[PSGLContext::Dispose] PSGL has been disposed!\n");
 }
 
 bool PSGLContext::IsVideoOutputReady() {
