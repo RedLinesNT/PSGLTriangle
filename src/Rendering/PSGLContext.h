@@ -112,6 +112,6 @@ public:
     static unsigned int GetBestVideoMode(const unsigned int* resolutions, unsigned int numResolutions);
 
 private:
-    PSGLcontext* glContext = nullptr;
-    PSGLdevice* glDevice = nullptr;
+    PSGLcontext* glContext;
+    PSGLdevice* glDevice;
 };

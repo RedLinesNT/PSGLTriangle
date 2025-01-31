@@ -10,15 +10,12 @@
 
 #include "Rendering/PSGLContext.h"
 
-/// <summary>
-/// Our target resolutions to use.
-/// </summary>
-constexpr unsigned int resolutions[] = {
-    CELL_VIDEO_OUT_RESOLUTION_1080,
-    CELL_VIDEO_OUT_RESOLUTION_720
-};
-
 int main() {
+    const unsigned int resolutions[] = { //Our target resolutions to use.
+        CELL_VIDEO_OUT_RESOLUTION_1080,
+        CELL_VIDEO_OUT_RESOLUTION_720,
+    };
+    
     //max usage spu, max raw spu
     sys_spu_initialize(6, 1);
 
