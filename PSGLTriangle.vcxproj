@@ -88,12 +88,12 @@
   <ItemGroup>
     <ClCompile Include="src\Entry.cpp" />
     <ClCompile Include="src\Rendering\PSGLContext.cpp" />
-    <ClCompile Include="src\Shapes\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Rendering\PSGLContext.h" />
+    <ClInclude Include="src\Shapes\Quad.hpp" />
     <ClInclude Include="src\Shapes\Shape.h" />
-    <ClInclude Include="src\Shapes\Triangle.h" />
+    <ClInclude Include="src\Shapes\Triangle.hpp" />
   </ItemGroup>
   <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

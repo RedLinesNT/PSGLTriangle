@@ -9,15 +9,17 @@
 #include <sysutil/sysutil_sysparam.h>
 
 #include "Rendering/PSGLContext.h"
-#include "Shapes/Shape.h"
-#include "Shapes/Triangle.h"
+#include "Shapes/Quad.hpp"
 
-int main() {
-    const unsigned int resolutions[] = { //Our target resolutions to use.
-        CELL_VIDEO_OUT_RESOLUTION_1080,
-        CELL_VIDEO_OUT_RESOLUTION_720,
-    };
-    
+#include "Shapes/Shape.h"
+#include "Shapes/Triangle.hpp"
+
+constexpr unsigned int resolutions[] = { //Our target resolutions to use
+    CELL_VIDEO_OUT_RESOLUTION_1080,
+    CELL_VIDEO_OUT_RESOLUTION_720,
+};
+
+int main() {    
     //max usage spu, max raw spu
     sys_spu_initialize(6, 1);
 
@@ -29,7 +31,7 @@ int main() {
     std::printf("[PSGLTriangle] PSGL's Context has been initialized!\n");
 
     //Create a shape
-    Shape* shape = new Triangle();
+    Shape* shape = new Quad();
     
     //TODO: KEY COMBO TO FORCE SHUTDOWN? (Could be fun)
     while (true) {

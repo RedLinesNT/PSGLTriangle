@@ -119,7 +119,14 @@ void PSGLContext::CreateDefaultOrthographicEnvironment() const {
     //simply using OpenGL with bindings (like with GLFW iirc).
 
     GLfloat aspectRatio = psglGetDeviceAspectRatio(glDevice);
-    float left = aspectRatio;
+
+    //Originally was:
+    //  float left = aspectRatio;
+    //  float right = -left;
+    //
+    //Had to flip them because the view looked flipped?
+    
+    float left = -aspectRatio;
     float right = -left;
     float top = 1;
     float bottom = -1;
