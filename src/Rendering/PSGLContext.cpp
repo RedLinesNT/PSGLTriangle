@@ -68,9 +68,20 @@ bool PSGLContext::Initialize(const unsigned int* resolutions, unsigned int numRe
     psglResetCurrentContext();
 
     //Everything is created, now we'll set up the rest of PSGL stuff
-    //TODO: INITIALIZE GL_VIEWPORT / GL_PROJECTION / ORTHOGRAPHIC STUFF
+    CreateViewport();
+    CreateDefaultOrthographicEnvironment();
+
+    //The PSGL doesn't clear up the screen after being initialized,
+    //we'll do it now. Why? First off because the documentation told me so,
+    //and also because there's a chance the 'PreRender' and 'PostRender'
+    //methods won't be called directly after this one (to load content for example).
+    //So we'll ensure everything has been cleared.
+    //(I forgot if it's the case with OpenGL)
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f); //Should output grey
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+    psglSwap();
     
-    return true;
+    return true; //Everything is finally ready to be used!
 }
 
 void PSGLContext::Dispose() const {
@@ -79,6 +90,44 @@ void PSGLContext::Dispose() const {
     psglExit();
     
     std::printf("[PSGLContext::Dispose] PSGL has been disposed!\n");
+}
+
+void PSGLContext::PreRender() {
+    //TODO: PRE-RENDERING
+}
+
+void PSGLContext::PostRender() {
+    //TODO: POST-RENDERING
+}
+
+void PSGLContext::CreateViewport() const {
+    //Retrieve the target buffer's dimensions (rendering dimensions)
+    unsigned int viewportWidth;
+    unsigned int viewportHeight;
+    psglGetRenderBufferDimensions(glDevice, &viewportWidth, &viewportHeight);
+
+    //Set the viewport
+    glViewport(0, 0, viewportWidth, viewportHeight); //(Explicit conversion between uint to int)
+}
+
+void PSGLContext::CreateDefaultOrthographicEnvironment() const {
+    //Get the appropriate aspect ratio (width/height) and
+    //set the correct projection for the Orthographic view
+    //
+    //This process (like many others) are quite the same as
+    //simply using OpenGL with bindings (like with GLFW iirc).
+
+    GLfloat aspectRatio = psglGetDeviceAspectRatio(glDevice);
+    float left = aspectRatio;
+    float right = -left;
+    float top = 1;
+    float bottom = -1;
+
+    glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        glOrthof(left, right, bottom, top, 0, 1);
+
+    glDisable(GL_CULL_FACE);
 }
 
 bool PSGLContext::IsVideoOutputReady() {

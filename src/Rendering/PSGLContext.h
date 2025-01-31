@@ -27,6 +27,26 @@ public:
     /// </summary>
     void Dispose() const;
 
+    /// <summary>
+    /// Create PSGL's viewport.
+    /// </summary>
+    /// <remarks>
+    /// Unlike desktop platforms this operation
+    /// should only be done once.
+    /// </remarks>
+    void CreateViewport() const;
+    /// <summary>
+    /// Create a default orthographic projection
+    /// to use with PSGL.
+    /// </summary>
+    /// <remarks>
+    /// In my current case, creating and using it
+    /// directly after the context's initialization isn't an
+    /// issue, but it'll be one day if concepts like cameras
+    /// and so on  are getting implemented (and I probably won't).
+    /// </remarks>
+    void CreateDefaultOrthographicEnvironment() const;
+    
     void PreRender();
     void PostRender();
 

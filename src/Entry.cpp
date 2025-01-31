@@ -29,7 +29,11 @@ int main() {
 
     std::printf("[PSGLTriangle] PSGL's Context has been initialized!\n");
 
-    //TODO: RUN LOOP!
+    //TODO: KEY COMBO TO FORCE SHUTDOWN? (Could be fun)
+    while (true) {
+        context->PreRender();
+        context->PostRender();
+    }
 
     context->Dispose();
     
