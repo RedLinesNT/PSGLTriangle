@@ -28,6 +28,10 @@ int main() {
     if (!initResult) { return -1; } //Initialization failed, details have already been printed
 
     std::printf("[PSGLTriangle] PSGL's Context has been initialized!\n");
+
+    //TODO: RUN LOOP!
+
+    context->Dispose();
     
     return CELL_OK; //Directly return into the XMB
 }
