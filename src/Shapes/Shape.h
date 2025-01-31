@@ -26,8 +26,4 @@ protected:
     /// The color of the vertices.
     /// </summary>
     float* colors;
-    /// <summary>
-    /// The indices of the shape.
-    /// </summary>
-    unsigned int* indices;
 };

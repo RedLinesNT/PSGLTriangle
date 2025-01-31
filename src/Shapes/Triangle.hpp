@@ -15,10 +15,6 @@ public:
             0.0f, 1.0f, 0.0f, 1.0f, //GREEN
             0.0f, 0.0f, 1.0f, 1.0f, //BLUE
         };
-
-        indices = new unsigned int[3] {
-            0, 1, 2,
-        };
     }
     ~Triangle() override = default;
     
