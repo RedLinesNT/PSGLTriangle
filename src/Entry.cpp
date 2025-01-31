@@ -9,6 +9,8 @@
 #include <sysutil/sysutil_sysparam.h>
 
 #include "Rendering/PSGLContext.h"
+#include "Shapes/Shape.h"
+#include "Shapes/Triangle.h"
 
 int main() {
     const unsigned int resolutions[] = { //Our target resolutions to use.
@@ -26,9 +28,15 @@ int main() {
 
     std::printf("[PSGLTriangle] PSGL's Context has been initialized!\n");
 
+    //Create a shape
+    Shape* shape = new Triangle();
+    
     //TODO: KEY COMBO TO FORCE SHUTDOWN? (Could be fun)
     while (true) {
         context->PreRender();
+        
+        shape->Render(); //Render our shape!
+
         context->PostRender();
     }
 

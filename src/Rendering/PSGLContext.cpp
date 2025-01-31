@@ -97,6 +97,7 @@ void PSGLContext::PreRender() {
 }
 
 void PSGLContext::PostRender() {
+    glFlush();
     psglSwap();
 }
 
