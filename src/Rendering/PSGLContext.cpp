@@ -26,7 +26,7 @@ bool PSGLContext::Initialize(const unsigned int* resolutions, unsigned int numRe
     glInitOptions.initializeSPUs = false; //Already previously initialized in "Entry.cpp"
     glInitOptions.persistentMemorySize = 0;
     glInitOptions.transientMemorySize = 0;
-    glInitOptions.errorConsole = 0;
+    glInitOptions.errorConsole = 1;
     glInitOptions.fifoSize = 0;
     
     //From what I understand, this is the memory that I allow
@@ -93,11 +93,11 @@ void PSGLContext::Dispose() const {
 }
 
 void PSGLContext::PreRender() {
-    //TODO: PRE-RENDERING
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 }
 
 void PSGLContext::PostRender() {
-    //TODO: POST-RENDERING
+    psglSwap();
 }
 
 void PSGLContext::CreateViewport() const {

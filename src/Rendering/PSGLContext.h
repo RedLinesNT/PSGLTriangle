@@ -42,12 +42,26 @@ public:
     /// <remarks>
     /// In my current case, creating and using it
     /// directly after the context's initialization isn't an
-    /// issue, but it'll be one day if concepts like cameras
+    /// issue, but it'll be one day if concepts like cameras, framebuffers,
     /// and so on  are getting implemented (and I probably won't).
     /// </remarks>
     void CreateDefaultOrthographicEnvironment() const;
-    
+
+    /// <summary>
+    /// 'PreRender' is supposed to be called before
+    /// any user graphics command to draw something.
+    /// </summary>
+    /// <remarks>
+    /// Open a new frame.
+    /// </remarks>
     void PreRender();
+    /// <summary>
+    /// 'PostRender' is supposed to be called after
+    /// every user graphics command to draw something.
+    /// </summary>
+    /// <remarks>
+    /// Close the current frame.
+    /// </remarks>
     void PostRender();
 
     /// <summary>
