@@ -1,5 +1,4 @@
-# PSGLTriangle
-Just me trying to draw a triangle on a PlayStation3 using PSGL.
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-Wide.png">
 <hr>
 
 ## Summary
@@ -8,14 +7,15 @@ Just me trying to draw a triangle on a PlayStation3 using PSGL.
 * [Disclaimer](#disclaimer)
 * [Background of the project](#background)
 * [Starting everything up](#the-subject)
-* [The app in itself / demos](#the-application--demos)
+* [The app in itself / demos](#demos)
 * [Retrospective](#retrospective)
 * [What's next?](#whats-next)
 * [Project information](#project-information)
+* <a href="#retrospective">TEST</a>
 <!--te-->
 <hr>
 
-## Disclaimer
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION01.png" id="disclaimer">
 
 <div>
 This "<i>project</i>" is only intended to be a mark of learning on a subject that is totally new to me.
@@ -30,7 +30,7 @@ It could use a lot of improvement with a little more learning on my part.
 </div>
 <hr>
 
-## Background
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION02.png" id="background">
 
 <div>
 <p>I've always been curious about everything and anything to do with video games. 
@@ -63,7 +63,7 @@ Gran Turismo, LBP, Split/Second, DRIVER</i> and more, anyway, I'm getting off tr
 </div>
 <hr>
 
-## The Subject
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION03.png" id="the-subject">
 
 <div>
 <p>As I said above, I have at best average experience in this area, 
@@ -97,7 +97,7 @@ surprised to realize that the <i>PSGL</i> is simply <i>OpenGL ES</i>, so I alrea
 </div>
 <hr>
 
-## The Application / Demos
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION04.png" id="demos">
 
 <div>
 The application itself is very, very simple.
@@ -112,8 +112,7 @@ You can get the latest version of the application in the “Release” category 
 Or you can watch a demonstration here! <strong>//TODO IMPLEMENT YT DEMO</strong>
 </div>
 <hr>
-
-## Retrospective
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION05.png" id="retrospective">
 
 <div>
 Here's a short list of things I would do differently if I were back at the start of the project:</div>
@@ -136,7 +135,7 @@ Here's a short list of things I would do differently if I were back at the start
 <!--te-->
 <hr>
 
-## What's next?
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION06.png" id="whats-next">
 
 <div>
 Not much, I think.
@@ -147,8 +146,7 @@ Probably with small features like gamepad support, or even redoing the whole thi
 I'm not sure whether I'll try to make something a bit bigger or do nothing ahahah.
 </div>
 <hr>
-
-## Project information
+<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION07.png" id="project-information">
 <table>
     <tr>
         <td>Platform Toolset</td>
