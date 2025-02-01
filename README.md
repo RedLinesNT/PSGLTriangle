@@ -54,7 +54,7 @@ But I still managed to render a cube from ZERO with tutorials, docs and samples.
 <div>
 <p>It was only a year later that I decided to try again with another PlayStation, the <i>PlayStation3</i>.</p>
 
-<p>Released on <i>November 11, 2006</i>, in Japan, quite a long time ago. It packs a lot of cool stuff: 
+<p>Released on <i>November 11, 2006</i> in Japan, quite a long time ago, it packs a lot of cool stuff: 
 <i>Blu-Ray</i>, <i>SIXAXIS (DualShock3)</i>, <i>1080p60</i>, <i>PSN</i>, <i>CELL</i> and so on.<br/>
 Not to mention the many licenses I've discovered or even seen being pushed on the 7th Generation, 
 like <i>The Last Of Us, MotorStorm, Max Payne, GTA, BURNOUT, Ratchet & Clank FUTURE, TDU, Red Dead, 
