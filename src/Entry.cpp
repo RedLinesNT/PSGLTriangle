@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////
 
 #include <cstdio>
-#include <cell/gcm.h>
 #include <sys/return_code.h>
 #include <sys/spu_initialize.h>
 #include <sysutil/sysutil_sysparam.h>
@@ -14,7 +13,27 @@
 #include "Shapes/Shape.h"
 #include "Shapes/Triangle.hpp"
 
-constexpr unsigned int resolutions[] = { //Our target resolutions to use
+/// <summary>
+/// The number of iterations in our
+/// loop to switch between the Triangle
+/// and the Quad.
+/// </summary>
+/// <remarks>
+/// Not sure, but there's a change this
+/// number correspond to the number of frames
+/// since PSGL is probably handling presentation
+/// cap automatically the framerate and block
+/// iterations for a certain amount of time,
+/// but I forgot...
+/// </remarks>
+constexpr int NumberLoopCountsToggleShapes = 180;
+
+/// <summary>
+/// Our "priority-ordered" list of
+/// resolutions to use with PSGL to display
+/// our application.
+/// </summary>
+constexpr unsigned int resolutions[] = {
     CELL_VIDEO_OUT_RESOLUTION_1080,
     CELL_VIDEO_OUT_RESOLUTION_720,
 };
@@ -56,19 +75,42 @@ int main() {
     if (!initResult) { return -1; } //Initialization failed, details have already been printed
     std::printf("[PSGLTriangle] PSGL's Context has been initialized!\n");
 
-    //Create a shape
-    Shape* shape = new Triangle();
+    int loopCounts = 0;
     
-    //TODO: KEY COMBO TO FORCE SHUTDOWN? (Could be fun)
+    //Create a shape
+    Shape* triangleShape = new Triangle();
+    Shape* quadShape = new Quad();
+
+    Shape* activeShapeToRender = triangleShape;
+    
+    //KEY COMBO TO FORCE SHUTDOWN? (Could be fun)
     while (!ShouldClose) {
         cellSysutilCheckCallback(); //Check for incoming system's callbacks
         
         context->PreRender(); //PSGL's Pre-Render Phase
-        shape->Render(); //Render our shape!
+        activeShapeToRender->Render(); //Render our shape!
         context->PostRender(); //PSGL's Post-Render Phase
-    }
 
+        loopCounts++;
+        if (loopCounts >= NumberLoopCountsToggleShapes) { //Toggle between the Triangle and Quad
+            if (activeShapeToRender == triangleShape) {
+                activeShapeToRender = quadShape;
+                std::printf("[PSGLTriangle] Displaying the Quad\n");
+            } else {
+                activeShapeToRender = triangleShape;
+                std::printf("[PSGLTriangle] Displaying the Triangle\n");
+            }
+
+            loopCounts = 0;
+        }
+    }
+    
     context->Dispose();
+
+    delete triangleShape;
+    delete quadShape;
+    delete activeShapeToRender;
+    delete context;
     
     return CELL_OK; //Directly return into the XMB
 }
