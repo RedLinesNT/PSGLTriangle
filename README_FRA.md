@@ -18,10 +18,9 @@
 
 <div>
 Ce "<i>projet</i>" n'a que pour but d'être une "<i>trace</i>" sur mon apprentissage d'un sujet totalement nouveau (du moins pour moi).
-Mon but était uniquement d'être capable de rendre un triangle à l'écran au sein d'une <i>PlayStation3</i> afin de mettre en pratique mes 
-"<i>compétences</i>" fraîchement acquises sur le sujet et non pas de développer une application/jeu complet.
-Vous pouvez voir ce projet comme une sorte de preuve face à ma détermination d'apprendre tout et n'importe quoi qui me 
-donne envie.
+Mon but était uniquement d'être capable de rendre un triangle à l'écran au sein d'une <i>PlayStation3</i> afin de mettre en pratique certaines de mes 
+"<i>compétences</i>" avec une théorie fraîchement comprises sur le sujet et non pas de développer une application/jeu complet.
+Vous pouvez voir ce projet comme une sorte de "preuve" face à ma détermination d'apprendre tout et n'importe quoi.
 
 Ce que j'ai programmé reste une approche extrêmement primitive du <i>PSGL</i> et de la <i>PlayStation3</i> en elle-même.
 Il pourrait recevoir beaucoup d'améliorations si je décide de continuer d'en apprendre plus sur l'API.
