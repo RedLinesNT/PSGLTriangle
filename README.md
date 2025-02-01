@@ -24,6 +24,10 @@ My goal was only to be able to render a triangle on a screen within the <i>PlayS
 on the subject and not to develop an entire application/game.
 You can see this project as my determination to learn whatever and everything, if you want. :)
 
+The README could be better, I'm not quite used to make them, it's been a long time...
+
+I'm a neybie yhen it comes to consoles, their constraints and the rest about them. I only have some basic theory.
+
 What I've programmed is an extremely primitive approach to <i>PSGL</i> and the <i>PlayStation3</i> in itself.
 It could use a lot of improvement with a little more learning on my part.
 
