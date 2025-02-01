@@ -1,7 +1,7 @@
 <img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-Wide.png">
 <hr>
 
-<i>Une version Fraçaise est [disponible ici!](https://github.com/RedLinesNT/PSGLTriangle/blob/main/README_FRA.md)</i>
+<i>Une version Française est [disponible ici!](https://github.com/RedLinesNT/PSGLTriangle/blob/main/README_FRA.md)</i>
 
 ## Summary
 
