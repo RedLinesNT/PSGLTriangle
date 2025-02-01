@@ -168,4 +168,4 @@ I'm not sure whether I'll try to make something a bit bigger or do nothing ahaha
 JetBrains Rider 2024.3.3 and Visual Studio 2013 ULTIMATE.</p>
 <hr>
 
-<div align="center"><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/logo_FAT2006.png"></div>
+<div align="center"><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/logo_FAT2006.png" height="40" width="auto"></div>
