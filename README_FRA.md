@@ -18,13 +18,13 @@
 
 <div>
 Ce "<i>projet</i>" n'a que pour but d'être une "<i>trace</i>" sur mon apprentissage d'un sujet totalement nouveau (du moins pour moi).
-Mon bet était d'uniquement être capable de rendre un triangle à l'écran au sein d'une <i>PlayStation3</i> afin de mettre en pratique mes 
+Mon but était uniquement d'être capable de rendre un triangle à l'écran au sein d'une <i>PlayStation3</i> afin de mettre en pratique mes 
 "<i>compétences</i>" fraîchement acquises sur le sujet et non pas de développer une application/jeu complet.
 Vous pouvez voir ce projet comme une sorte de preuve face à ma détermination d'apprendre tout et n'importe quoi qui me 
-donne envie X ou Y.
+donne envie.
 
 Ce que j'ai programmé reste une approche extrêmement primitive du <i>PSGL</i> et de la <i>PlayStation3</i> en elle-même.
-Il pourrait recevoir beaucoup d'améliorations si je décide de continuer une sorte d'apprentissage de l'API.
+Il pourrait recevoir beaucoup d'améliorations si je décide de continuer d'en apprendre plus sur l'API.
 
 <strong>Je ne suis pas en possibilité de fournir les <i>SDKs</i>, <i>toolchains</i> ou <i>compilers</i> utilisés.</strong>
 </div>
@@ -43,7 +43,7 @@ Du simple rendu d'un cube aux shaders, <i>3rd party libraries</i> comme <i>Dear.
 
 <div>
 <p>Ma curiosité s'est portée sur les consoles,
-qui sont pour moi 100x fois plus différentes que des machines "<i>desktop-based (PC)</i>", et la <i>PlayStation2</i> (<i>étrangement</i>) mon premier choix.</p>
+qui sont pour moi 100x fois plus différentes que des machines "<i>desktop-based (PC)</i>", et la <i>PlayStation2</i> a (<i>étrangement</i>) été mon premier choix.</p>
 
 <p>J'avais déjà quelques notions primitives dans ce domaine, et je voulais faire quelque chose de totalement différent sur quelque chose que je n'avais
 jamais touché précédemment niveau développement.<br/>
@@ -72,9 +72,9 @@ Gran Turismo, LBP, Split/Second, DRIVER</i> et encore, bref, je dérape la.<br/>
 c'était que sur des machines <i>desktop-based (PC)</i>, pas des consoles! J'ai donc rapidement commencé à établir les options qui sont à ma disposition.</p>
 <strong><i>Gardez en tête que je n'ai pas de DEVKIT/DEVTOOL ou même de REFERENCE TOOL, 
 uniquement une <i>PlayStation3 SuperSlim</i> quasiement un-jailbreakable et/ou l'emulation à ma disposition.</i></strong> 
-Tester directement sur ma propre PS3 n'est pas non plus impossible, mais just compliqué et long avec une console
+Tester directement sur ma propre PS3 n'est pas non plus impossible, mais juste compliqué et long avec une console
 qui freeze ou crash pour le plaisir. L'emulation (RPCS3) était la route à prendre pour rapidement tester/debugger.<br/>
-Donc je suis déjà un peu short niveau hardware pour du développement (je trouve).
+Donc je suis déjà un peu short niveau hardware pour du développement (je trouve).<br/>
 
 <i>UnrealEngine3</i> et <i>Unity5</i> ont eu du support pour la <i>PlayStation3</i>, 
 mais non (<i>ce n'est pas vraiment ce que j'aimerais, je veux me défier - faire quelque chose "from scratch"</i>).
@@ -133,7 +133,7 @@ Voici une petite liste de choses que je ferais différemment si je revenais au d
 
 <!--ts-->
 * <strong>Traiter PSGL "comme" OpenGL</strong>
-  * Je suis resté trop longtemps devant la documentation et considéré les deux comme totalement différents.<br/>
+  * Je suis resté trop longtemps devant la documentation et considairais les deux comme totalement différents.<br/>
     En pratique, c'est comme utiliser <i>OpenGL</i> avec des bindings différents de <i>GLFW</i> ou <i>GLuT</i>.
   
 * <strong>Une meilleure structure</strong>
