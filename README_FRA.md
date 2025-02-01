@@ -22,6 +22,10 @@ Mon but était uniquement d'être capable de rendre un triangle à l'écran au s
 "<i>compétences</i>" avec une théorie fraîchement comprises sur le sujet et non pas de développer une application/jeu complet.
 Vous pouvez voir ce projet comme une sorte de "preuve" face à ma détermination d'apprendre tout et n'importe quoi.
 
+Le README est pas incroyable, j'ai perdu l'habitude...
+
+Je suis un novice dans ce qui concerne les consoles, leurs contraintes et ce qui suit. Je n'ai qu'une partie théorique.
+
 Ce que j'ai programmé reste une approche extrêmement primitive du <i>PSGL</i> et de la <i>PlayStation3</i> en elle-même.
 Il pourrait recevoir beaucoup d'améliorations si je décide de continuer d'en apprendre plus sur l'API.
 
