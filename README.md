@@ -116,9 +116,9 @@ You can get the latest version of the application in the “Release” category 
 Or you can [watch a demonstration here!](https://www.youtube.com/watch?v=rQP_tcSHeaE)
 
 <a href="https://www.youtube.com/watch?v=rQP_tcSHeaE" align="center" float="left">
-<kbd><img src="https://img.youtube.com/vi/rQP_tcSHeaE/maxresdefault.jpg" width="auto" height="150" align="center"></kbd>
-<kbd><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/TRIANGLE.png" width="auto" height="150" align="center"></kbd>
-<kbd><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/QUAD.png" width="auto" height="150" align="center"></kbd>
+<kbd><img src="https://img.youtube.com/vi/rQP_tcSHeaE/maxresdefault.jpg" width="auto" height="130" align="center"></kbd>
+<kbd><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/TRIANGLE.png" width="auto" height="130" align="center"></kbd>
+<kbd><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/QUAD.png" width="auto" height="130" align="center"></kbd>
 </a>
 
 </div>
