@@ -1,6 +1,8 @@
 <img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-Wide.png">
 <hr>
 
+<i>Une version Fraçaise est [disponible ici!](https://github.com/RedLinesNT/PSGLTriangle/blob/main/README_FRA.md)</i>
+
 ## Summary
 
 <!--ts-->
@@ -153,6 +155,7 @@ Not much, I think.
 
 Since I've got some time to kill, I'm thinking of continuing to experiment with the PlayStation3. 
 Probably with small features like gamepad support, or even redoing the whole thing but with GCM (the PSGL equivalent).
+And also maybe learn a bit more concepts like PPUs, SPUs, ...
 
 I'm not sure whether I'll try to make something a bit bigger or do nothing ahahah.
 </div>
