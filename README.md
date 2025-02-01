@@ -11,7 +11,6 @@
 * [Retrospective](#retrospective)
 * [What's next?](#whats-next)
 * [Project information](#project-information)
-* <a href="#retrospective">TEST</a>
 <!--te-->
 <hr>
 
