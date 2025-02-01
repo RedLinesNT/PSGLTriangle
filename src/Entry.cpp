@@ -107,10 +107,5 @@ int main() {
     
     context->Dispose();
 
-    delete triangleShape;
-    delete quadShape;
-    delete activeShapeToRender;
-    delete context;
-    
     return CELL_OK; //Directly return into the XMB
 }
