@@ -1,9 +1,11 @@
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-Wide.png">
-<hr>
+<img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-Wide.png?raw=true" alt="Project Image">
 
 <i>Une version Française est [disponible ici!](https://github.com/RedLinesNT/PSGLTriangle/blob/main/README_FRA.md)</i>
+<hr>
 
-## Summary
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION00.png?raw=true" id="summary" alt="Summary">
+</a>
 
 <!--ts-->
 * [Disclaimer](#disclaimer)
@@ -16,7 +18,9 @@
 <!--te-->
 <hr>
 
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION01.png" id="disclaimer">
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION01.png?raw=true" id="disclaimer" alt="Disclaimer">
+</a>
 
 <div>
 This "<i>project</i>" is only intended to be a "<i>trace</i>" of myself learning a subject totally new (at least to me).
@@ -35,7 +39,9 @@ It could use a lot of improvement with a little more learning on my part.
 </div>
 <hr>
 
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION02.png" id="background">
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION02.png?raw=true" id="background" alt="Background">
+</a>
 
 <div>
 <p>I've always been curious about everything and anything to do with video games. 
@@ -69,7 +75,9 @@ Gran Turismo, LBP, Split/Second, DRIVER</i> and more, anyway, I'm getting off tr
 </div>
 <hr>
 
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION03.png" id="the-subject">
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION03.png?raw=true" id="the-subject" alt="The Subject">
+</a>
 
 <div>
 <p>As I said above, I have average experience at best in this area, 
@@ -107,7 +115,9 @@ so I already had most if not all the basic concepts already in mind.
 </div>
 <hr>
 
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION04.png" id="demos">
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION04.png?raw=true" id="demos" alt="Demos">
+</a>
 
 <div>
 The application itself is very, very simple.
@@ -123,13 +133,16 @@ Or you can [watch a demonstration here!](https://www.youtube.com/watch?v=rQP_tcS
 
 <a href="https://www.youtube.com/watch?v=rQP_tcSHeaE" align="center" float="left">
 <kbd><img src="https://img.youtube.com/vi/rQP_tcSHeaE/maxresdefault.jpg" width="auto" height="130" align="center"></kbd>
-<kbd><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/TRIANGLE.png" width="auto" height="130" align="center"></kbd>
-<kbd><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/QUAD.png" width="auto" height="130" align="center"></kbd>
+<kbd><img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/TRIANGLE.png?raw=true" width="auto" height="130" align="center"></kbd>
+<kbd><img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/QUAD.png?raw=true" width="auto" height="130" align="center"></kbd>
 </a>
 
 </div>
 <hr>
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION05.png" id="retrospective">
+
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION05.png?raw=true" id="retrospective" alt="Retrospective">
+</a>
 
 <div>
 Here's a short list of things I would do differently if I were back at the start of the project:</div>
@@ -152,7 +165,9 @@ Here's a short list of things I would do differently if I were back at the start
 <!--te-->
 <hr>
 
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION06.png" id="whats-next">
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION06.png?raw=true" id="whats-next" alt="What's next?">
+</a>
 
 <div>
 Not much, I think.
@@ -164,7 +179,11 @@ And also maybe learn a bit more concepts like PPUs, SPUs, ...
 I'm not sure whether I'll try to make something a bit bigger or do nothing ahahah.
 </div>
 <hr>
-<img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/PSGLTriangle-SECTION07.png" id="project-information">
+
+<a href="#">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/PSGLTriangle-SECTION07.png?raw=true" id="project-information" alt="Project Information">
+</a>
+
 <table>
     <tr>
         <td>Platform Toolset</td>
@@ -185,4 +204,6 @@ JetBrains Rider 2024.3.3 and Visual Studio 2013 ULTIMATE.<br/>
 Tested on a <i>PlayStation3 SuperSlim (Firmware: 4.91)</i>.</p>
 <hr>
 
-<div align="center"><img src="https://github.com/RedLinesNT/PSGLTriangle/blob/main/assets/logo_FAT2006.png" height="20" width="auto"></div>
+<a href="#" align="center">
+    <img src="https://github.com/RedLinesNT/GitAssets/blob/main/PSGLTriangle/logo_FAT2006.png?raw=true" alt="PlayStation3 2006 Logo" align="center" height="20" width="auto">
+</a>
