@@ -1,0 +1,5 @@
+ContentID = XXYYYY-LGPS00001_00-XXXXXXXXXXXXXXXX
+Klicensee = 0x0
+DRMType= Free
+ContentType = GameExec
+PackageVersion = 01.00
