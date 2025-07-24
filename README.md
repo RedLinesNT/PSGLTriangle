@@ -16,10 +16,10 @@
     <img src="./assets/PSGLTriangle-SECTION01.png" id="disclaimer" alt="Disclaimer">
 </a>
 <div>
-This project has originally been made in mid-January 2025. I simply woke up one day and decided to "remaster" it. 
+This project has originally been made in mid-January 2025 (in like 2/3 days). I simply woke up one day and decided to "remaster" it. 
 The only purpose of it is to keep a "trace" to something I learnt for fun.
 
-I wanted to get out of my "comfort place" (desktop-based systems) and discover new stuff, and the PlayStation3 was for me a funny thing to try. Learning its constraints, workspace, tools, ...
+I wanted to get out of my "comfort place" (desktop-based systems) and discover new stuff, and the PlayStation3 was for me a funny thing to try. Learning its constraints, workspace, tools, ...<br/>
 What I made is an extremely primitive approach to <i>PSGL</i> and the <i>PlayStation3</i> in itself. So there's no usage of SPU/SPURS (I'll probably do that shit when I'll get my hands into GCM, you know, for fun).
 
 <strong>I'm (obviously) not able to provide the <i>SDKs</i>, <i>toolchains</i> or <i>compilers</i> used.</strong>
