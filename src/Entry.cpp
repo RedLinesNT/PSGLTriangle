@@ -10,6 +10,7 @@
 #include "Rendering/PerspectiveCamera.h"
 #include "Core/CELLCallbacks.h"
 #include "Core/DeltaTime.hpp"
+#include "Input/PadUtility.h"
 
 SYS_PROCESS_PARAM(1001, 0x10000)
 
@@ -24,6 +25,14 @@ constexpr unsigned int resolutions[] = {
 	CELL_VIDEO_OUT_RESOLUTION_480,
 };
 
+static void ColorRED() {
+	Renderer::SetClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+}
+
+static void ColorGREEN() {
+	Renderer::SetClearColor(0.0f, 1.0f, 0.0f, 1.0f);
+}
+
 PerspectiveCamera* worldCamera = nullptr;
 
 int main(){
@@ -32,6 +41,10 @@ int main(){
 	sys_spu_initialize(6, 1); //1 Raw SPU used by PSGL
 	CELLCallbacks::BindCallbacks();
 	DeltaTime* deltaTime = new DeltaTime();
+	PadUtility::Initialize(PAD_EIGHT);
+
+	PadUtility::GetPad(PAD_ONE).SetPressedFunc(E_PAD_BUTTONS::CROSS, ColorRED);
+	PadUtility::GetPad(PAD_ONE).SetPressedFunc(E_PAD_BUTTONS::CIRCLE, ColorGREEN);
 
 	if (!Renderer::Initialize(resolutions, sizeof(resolutions)/sizeof(resolutions[0]))) {
 		return -1; //Initialization failed, details have been printed
@@ -49,8 +62,10 @@ int main(){
 		Renderer::PostRender();
 		
 		CELLCallbacks::Update();
+		PadUtility::Update();
 	}
 
+	PadUtility::Dispose();
 	CELLCallbacks::UnbindCallbacks();
 	Renderer::Shutdown();
 

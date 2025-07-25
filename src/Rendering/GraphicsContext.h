@@ -76,6 +76,8 @@ private:
 	//-----------------------------------------------------------------------------
 	static unsigned int GetBestVideoOutputID(const unsigned int* wantedCellResolutionIDs, unsigned int count);
 
+	static void SetClearColor(GLclampf r, GLclampf g, GLclampf b, GLclampf a);
+
 private:
 	PSGLcontext* psglContext;
 	PSGLdevice* psglDevice;

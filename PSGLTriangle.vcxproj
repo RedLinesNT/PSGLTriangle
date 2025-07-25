@@ -87,6 +87,8 @@
     <ClCompile Include="src\Core\Core.h" />
     <ClCompile Include="src\Entity\Transform.hpp" />
     <ClCompile Include="src\Entry.cpp" />
+    <ClCompile Include="src\Input\Pad.cpp" />
+    <ClCompile Include="src\Input\PadUtility.cpp" />
     <ClCompile Include="src\Rendering\Camera.cpp" />
     <ClCompile Include="src\Rendering\GraphicsContext.cpp" />
     <ClCompile Include="src\Rendering\PerspectiveCamera.cpp" />
@@ -95,6 +97,8 @@
   <ItemGroup>
     <ClInclude Include="src\Core\CELLCallbacks.h" />
     <ClInclude Include="src\Core\DeltaTime.hpp" />
+    <ClInclude Include="src\Input\Pad.h" />
+    <ClInclude Include="src\Input\PadUtility.h" />
     <ClInclude Include="src\Rendering\Camera.h" />
     <ClInclude Include="src\Rendering\GraphicsContext.h" />
     <ClInclude Include="src\Rendering\PerspectiveCamera.h" />

@@ -140,3 +140,7 @@ unsigned int GraphicsContext::GetBestVideoOutputID(const unsigned int* wantedCel
 
 	return 0; //Nothing is available :(
 }
+
+void GraphicsContext::SetClearColor(GLclampf r, GLclampf g, GLclampf b, GLclampf a) {
+	glClearColor(r, g, b, a);
+}

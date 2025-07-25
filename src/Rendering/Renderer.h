@@ -56,6 +56,7 @@ public:
 	inline static GLfloat GetAspectRatio() { return context->aspectRatio; }
 	inline static bool IsVSyncEnabled() { return context->isVSyncEnabled; }
 	inline static void SetVSync(bool value) { context->isVSyncEnabled = value; }
+	inline static void SetClearColor(GLclampf r, GLclampf g, GLclampf b, GLclampf a) { context->SetClearColor(r, g, b, a); }
 
 private:
 	static GraphicsContext* context;
