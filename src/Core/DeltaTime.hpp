@@ -7,11 +7,10 @@ public:
 	inline DeltaTime() { lastTime = std::clock(); }
 
 	//-----------------------------------------------------------------------------
-	// Description: Calculate the difference between this "UpdateDeltaTime" call
-	//				and the previous call.
-	// Parameters:
-	// Returns: The deltaTime between each calls.
-	// Notes:
+	// Calculate the difference between this "UpdateDeltaTime" call 
+	// and the previous call.
+	// Returns: 
+	//      The deltaTime between each calls.
 	//-----------------------------------------------------------------------------
 	inline float UpdateDeltaTime(){
 		std::clock_t currentTime = std::clock();
