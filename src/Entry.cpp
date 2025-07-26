@@ -47,7 +47,7 @@ int main(){
 	PadUtility::GetPad(PAD_ONE).SetPressedFunc(E_PAD_BUTTONS::CIRCLE, ColorGREEN);
 
 	if (!Renderer::Initialize(resolutions, sizeof(resolutions)/sizeof(resolutions[0]))) {
-		return -1; //Initialization failed, details have been printed
+		exit(-1); //Initialization failed, details have been printed
 	}
 
 	//Set up a Perspective Camera
